@@ -12,18 +12,14 @@ to set the `FELTOR_PATH` environment variable in the bash scripts
 
 ## How to reproduce the results
 
-There are two jupyter notebooks `first-plot.ipynb` and `data-analysis.ipynb`
-and the python script `generate-data.py`.
-The first notebook is intended to explore a locally run simulation in a short amount of time.
-There are no data dependencies.
+There are three jupyter notebooks `flux-surface-averages.ipynb`, `theory-section.ipynb` and `toroidal-averages.ipynb`.
+The first two notebooks run the program `feltor/inc/geometries/geometry_diag`, which needs to be manually compiled
+```bash
+cd path-to-feltor/inc/geometries
+make geometry_diag device=omp # compile for OpenMP backend
+```
+while the last one bases on the `feltor/src/feltor` project.
 
-The second notebook requires to generate all simulation data with the `generate-data.py` script.
-The latter is intended to be executed on a computing cluster.
-The data that the simulation generates is too large to host alongside the
-notebooks so unfortunately you will not be able to run the `data-analysis.ipynb` notebook
-"out of the box". You will have to download and run this repository and its dependencies
-described above locally on your machine /on a compute cluster in order to reproduce the data.
-Once the data is available locally, the `data-analysis.ipynb` notebook can be executed.
 
 ## Author
 Matthias Wiesenberger
