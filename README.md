@@ -16,7 +16,7 @@ There are three jupyter notebooks `flux-surface-averages.ipynb`, `theory-section
 The first two notebooks run the program `feltor/inc/geometries/geometry_diag`, which needs to be manually compiled
 ```bash
 cd path-to-feltor/src/geometry_diag/
-make geometry_diag device=omp # compile for OpenMP backend
+make geometry_diag
 ```
 while the last one bases on the `feltor/src/feltor` project.
 
